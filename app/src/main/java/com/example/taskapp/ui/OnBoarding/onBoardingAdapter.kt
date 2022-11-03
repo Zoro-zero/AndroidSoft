@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.taskapp.R
 import com.example.taskapp.data.onBoard
-import com.example.taskapp
-.databinding.ItemOnboardBinding
+import com.example.taskapp.databinding.ItemOnboardBinding
 
 class onBoardingAdapter(private val onClick : () -> Unit) : RecyclerView.Adapter<onBoardingAdapter.onBoardingViewHolder>() {
     private val array = arrayListOf<onBoard>(
@@ -28,7 +27,7 @@ class onBoardingAdapter(private val onClick : () -> Unit) : RecyclerView.Adapter
 
     override fun getItemCount() = array.size
 
-    inner class onBoardingViewHolder(private val binding:ItemOnboardBinding):RecyclerView.ViewHolder(binding.root){
+    inner class onBoardingViewHolder(private val binding: ItemOnboardBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(onBoard: onBoard) {
             binding.textTitle.text = onBoard.title
             binding.textDesc.text = onBoard.desc

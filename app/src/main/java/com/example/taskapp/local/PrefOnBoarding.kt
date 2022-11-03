@@ -4,9 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 
 class PrefOnBoarding(private val context: Context) {
-
     private var pref : SharedPreferences = context.getSharedPreferences(PREF_BOARD , Context.MODE_PRIVATE)
-
 
     fun isonBoardingShow():Boolean{
         return pref.getBoolean(SHOW_BOARDING , false)
